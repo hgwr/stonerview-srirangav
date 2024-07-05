@@ -99,6 +99,7 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     edges     = [defaults boolForKey:@"edges"];
     shape     = (int)[defaults integerForKey:@"shape"];
     speed     = [defaults floatForKey:@"speed"];
+    default_speed = 1.0 / 30.0;
     alpha     = [defaults floatForKey:@"alpha"];
     
     return self;
@@ -173,7 +174,7 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glFlush();
 
-    default_speed = [self animationTimeInterval];
+    // [self animationTimeInterval];
     [self setAnimationTimeInterval:default_speed/speed];
     [super startAnimation];
 }
