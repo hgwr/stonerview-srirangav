@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="110000" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -34,7 +34,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="4" y="111" width="426" height="340"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <view key="contentView" autoresizesSubviews="NO" id="17">
                 <rect key="frame" x="0.0" y="0.0" width="426" height="340"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -70,10 +70,10 @@ Original StonerView by Andrew Plotkin
                         <rect key="frame" x="17" y="148" width="138" height="87"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="s2J-fe-8cq">
-                            <rect key="frame" x="3" y="3" width="132" height="67"/>
+                            <rect key="frame" x="4" y="5" width="130" height="65"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71">
+                                <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71">
                                     <rect key="frame" x="12" y="15" width="70" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <buttonCell key="cell" type="check" title="Edges" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="206">
@@ -84,7 +84,7 @@ Original StonerView by Andrew Plotkin
                                         <action selector="updateConfigureSheet:" target="-2" id="136"/>
                                     </connections>
                                 </button>
-                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93">
+                                <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93">
                                     <rect key="frame" x="12" y="37" width="89" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <buttonCell key="cell" type="check" title="Fil di ferro" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="207">
@@ -103,7 +103,7 @@ Original StonerView by Andrew Plotkin
                         <rect key="frame" x="9" y="33" width="405" height="5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="LgD-E4-98n">
-                            <rect key="frame" x="3" y="2.5" width="399" height="0.0"/>
+                            <rect key="frame" x="4" y="3.5" width="397" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </view>
                         <font key="titleFont" metaFont="system"/>
@@ -121,12 +121,12 @@ Original StonerView by Andrew Plotkin
                         <rect key="frame" x="9" y="240" width="405" height="5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="rnd-Pv-GxY">
-                            <rect key="frame" x="3" y="2.5" width="399" height="0.0"/>
+                            <rect key="frame" x="4" y="3.5" width="397" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </view>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="149">
+                    <popUpButton imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="149">
                         <rect key="frame" x="235" y="198" width="128" height="26"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <popUpButtonCell key="cell" type="push" title="Quads" bezelStyle="rounded" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="146" id="194">
@@ -213,7 +213,7 @@ Original StonerView by Andrew Plotkin
                             <action selector="updateConfigureSheet:" target="-2" id="165"/>
                         </connections>
                     </slider>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="171">
+                    <button imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="171">
                         <rect key="frame" x="11" y="48" width="173" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Auf Updates checken" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="202">
@@ -224,7 +224,7 @@ Original StonerView by Andrew Plotkin
                             <action selector="checkUpdates:" target="-2" id="175"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="172">
+                    <button tag="1" imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="172">
                         <rect key="frame" x="194" y="48" width="106" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="203">
@@ -238,7 +238,7 @@ Gw
                             <action selector="closeSheet_cancel:" target="-2" id="177"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="173">
+                    <button imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="173">
                         <rect key="frame" x="300" y="48" width="113" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="204">
@@ -252,7 +252,7 @@ DQ
                             <action selector="closeSheet_save:" target="-2" id="179"/>
                         </connections>
                     </button>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="186">
+                    <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="186">
                         <rect key="frame" x="15" y="94" width="213" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Main monitor only" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="205">

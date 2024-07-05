@@ -237,12 +237,12 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     [IBwireframe setTitle: [thisBundle localizedStringForKey: @"Wireframe"
                                                        value: @""
                                                        table: @""]];
-    [IBwireframe setState:(wireframe ? NSOnState : NSOffState)];
+    [IBwireframe setState:(wireframe ? NSControlStateValueOn : NSControlStateValueOff)];
 
     [IBedges setTitle: [thisBundle localizedStringForKey: @"Edges"
                                                    value: @""
                                                    table: @""]];
-    [IBedges setState:(edges ? NSOnState : NSOffState)];
+    [IBedges setState:(edges ? NSControlStateValueOn : NSControlStateValueOff)];
 
     [IBshapeTxt setStringValue:
         [thisBundle localizedStringForKey:@"Shape" value:@"" table:@""]];
@@ -278,7 +278,7 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
         [thisBundle localizedStringForKey:@"Transp." value:@"" table:@""]];
     [IBalpha setFloatValue:alpha*10];
 
-    [IBmainMonitorOnly setState:(mainMonitorOnly ? NSOnState : NSOffState)];
+    [IBmainMonitorOnly setState:(mainMonitorOnly ? NSControlStateValueOn : NSControlStateValueOff)];
 
     [IBmainMonitorOnly setTitle:
         [thisBundle localizedStringForKey: @"Main monitor only"
@@ -315,10 +315,10 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
 #endif
 
     mainMonitorOnly =
-        ( [IBmainMonitorOnly state] == NSOnState ) ? true : false;
+    ( [IBmainMonitorOnly state] == NSControlStateValueOn ) ? true : false;
 
-    wireframe	 = ( [IBwireframe state] == NSOnState ) ? true : false;
-    edges	 = ( [IBedges state] == NSOnState ) ? true : false;
+    wireframe	 = ( [IBwireframe state] == NSControlStateValueOn ) ? true : false;
+    edges	 = ( [IBedges state] == NSControlStateValueOn ) ? true : false;
     shape        = (int)[IBshape indexOfSelectedItem];
     speed        = [IBspeed floatValue];
     alpha        = [IBalpha floatValue]/10.0;
@@ -352,8 +352,9 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     set_transparency(alpha);
     [self setAnimationTimeInterval:default_speed/speed];
 
-    //[NSApp endSheet:configureSheet];
+    [NSApp endSheet:configureSheet returnCode:NSModalResponseOK];
     [configureSheet orderOut:sender];
+    configureSheet = nil;
 }
 
 - (IBAction) closeSheet_cancel:(id) sender {
@@ -366,8 +367,9 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     set_transparency(alpha);
     [self setAnimationTimeInterval:default_speed/speed];
 
-    //[NSApp endSheet:configureSheet];
+    [NSApp endSheet:configureSheet returnCode:NSModalResponseOK];
     [configureSheet orderOut:sender];
+    configureSheet = nil;
 }
 
 - (IBAction)updateConfigureSheet:(id) sender
@@ -381,8 +383,8 @@ CFBundleGetBundleWithIdentifier(CFSTR("com.eblong.screensaver.stonerview")),CFST
     NSLog( @"updateConfigureSheet" );
 #endif
     
-    wireframe_test = ( [IBwireframe state] == NSOnState ) ? true : false;
-    edges_test	   = ( [IBedges state] == NSOnState ) ? true : false;
+    wireframe_test = ( [IBwireframe state] == NSControlStateValueOn ) ? true : false;
+    edges_test	   = ( [IBedges state] == NSControlStateValueOn ) ? true : false;
     shape_test     = (int)[IBshape indexOfSelectedItem];
     speed_test     = [IBspeed floatValue];
     alpha_test     = [IBalpha floatValue]/10.0;
